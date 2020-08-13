@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 RUN apt update && \
  apt install -y wget gcc make cmake g++ git \
         valgrind libboost-all-dev language-pack-en-base libboost-python-dev python3-dev \
-        sshpass\
+        sshpass gfortran libsuperlu-dev \
 	clang-tidy clang libboost-all-dev python-yaml fontconfig python3-pip\
  && rm -rf /var/lib/apt/lists/* 
 RUN apt update && \
