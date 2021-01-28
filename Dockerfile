@@ -4,7 +4,7 @@ RUN apt update && \
         valgrind libboost-all-dev language-pack-en-base libboost-python-dev python3-dev \
         sshpass gfortran libsuperlu-dev libopenblas-dev \
 	clang-tidy clang libboost-all-dev python-yaml fontconfig python3-pip\
- && rm -rf /var/lib/apt/lists/* 
+ && rm -rf /var/lib/apt/lists/* && cmake --version
 RUN apt update && \
     apt install -y clang-8 clang-tidy-8
 RUN apt-get update && \
