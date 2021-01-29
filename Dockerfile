@@ -5,9 +5,7 @@ RUN apt update && \
         sshpass gfortran libsuperlu-dev libopenblas-dev \
 	clang-tidy clang libboost-all-dev python-yaml fontconfig python3-pip\
  && rm -rf /var/lib/apt/lists/*
-RUN wget -q -O cmake-3.19.3-Linux-x86_64.sh https://github.com/Kitware/CMake/releases/download/v3.19.3/cmake-3.19.3-Linux-x86_64.sh \
- && chmod +x cmake-3.19.3-Linux-x86_64.sh \
- && sh cmake-3.19.3-Linux-x86_64.sh && ls
+RUN add-apt-repository ppa:george-edison55/cmake-3.x && sudo apt update && sudo apt install cmake
 RUN apt update && \
     apt install -y clang-8 clang-tidy-8
 RUN apt-get update && \
